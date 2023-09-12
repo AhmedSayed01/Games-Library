@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Games-Library/static/css/main.94cb2b0b.css",
+    "main.js": "/Games-Library/static/js/main.034b7214.js",
+    "static/media/black.jpg": "/Games-Library/static/media/black.05bc3ea23a22634ede39.jpg",
+    "index.html": "/Games-Library/index.html",
+    "main.94cb2b0b.css.map": "/Games-Library/static/css/main.94cb2b0b.css.map",
+    "main.034b7214.js.map": "/Games-Library/static/js/main.034b7214.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94cb2b0b.css",
+    "static/js/main.034b7214.js"
+  ]
+}
