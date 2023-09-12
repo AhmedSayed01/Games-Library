@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Link, Route, Routes, Navigate, useNavigate, BrowserRouter } from "react-router-dom";
+import { Link, Route, Routes, Navigate } from "react-router-dom";
 // import Home from './components/Home';
 import Cat from './components/Cat';
 import TheCat from './components/TheCat';
@@ -11,7 +11,6 @@ import XBOX from './components/Xbox';
 import { useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
 import MainPage from './pages/mainPage/mainPage';
-// import Consoles from './pages/consoles/consoles';
 function App() {
   const [toggle, setToggle] = useState(true);
   // const navigate = useNavigate()
@@ -24,7 +23,7 @@ function App() {
   return (
     <div className='App' >
       <nav style={{ display: 'flex', padding: '2rem 3rem', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* <Hamburger toggled={toggle} toggle={setToggle} /> */}
+        
         <h1 style={{ color: '#ffffff' }}>Games List</h1>
         <div>
           <button className='navButton' onClick={() => setToggle(!toggle)}><HiMenu /></button>
@@ -40,25 +39,20 @@ function App() {
           </ul>
         </div>
       </nav>
-      {/* <BrowserRouter> */}
+      
       <Routes>
         {/* <Route index element={<Home />} /> */}
         <Route index element={<MainPage />} />
         <Route exact path='/' element={<MainPage />} />
 
-        {/* <Route exact path='/' element={<Home />} /> */}
         <Route path='/cat' element={<Cat />} />
         <Route path='/pc' element={<PC />} />
         <Route path='/ps' element={<PS />} />
         <Route path='/xbox' element={<XBOX />} />
-        {/* <Route path='/consoles/*' element={<Consoles />} /> */}
-        {/* <Route path='/ps' element={<Consoles id={2} />} />
-        <Route path='/xbox' element={<Consoles id={1} />} /, cursor:'pointer'> */}
         <Route path='/thecat/:id' element={<TheCat />} />
         <Route path='/game/:id' element={<Game />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-      {/* </BrowserRouter> */}
     </div>
   );
 }
